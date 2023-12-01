@@ -5,33 +5,33 @@ function get_dssp_new($limi){
     return pdo_query($sql);
 }
 
-// function get_dssp_best($limi){
-//     $sql = "SELECT * FROM sanpham WHERE bestseller=1 ORDER BY sanpham_id DESC limit ".$limi;
-//     return pdo_query($sql);
-//}
-// function get_dssp_view($limi){
-//     $sql = "SELECT * FROM sanpham ORDER BY sanpham_view DESC limit ".$limi;
-//     return pdo_query($sql);
-// }
-// function get_dssp($kyw,$iddm,$limi){
-//     $sql = "SELECT * FROM sanpham WHERE 1";
-//     if($iddm>0){
-//         $sql .=" AND id=".$iddm;
-//     }
-//     if($kyw!=""){
-//         $sql .=" AND ten_sp like '%".$kyw."%'";
-//     }
+function get_dssp_best($limi){
+    $sql = "SELECT * FROM sanpham WHERE bestseller=1 ORDER BY sanpham_id DESC limit ".$limi;
+    return pdo_query($sql);
+}
+function get_dssp_view($limi){
+    $sql = "SELECT * FROM sanpham ORDER BY sanpham_view DESC limit ".$limi;
+    return pdo_query($sql);
+}
+function get_dssp($kyw,$iddm,$limi){
+    $sql = "SELECT * FROM sanpham WHERE 1";
+    if($iddm>0){
+        $sql .=" AND id=".$iddm;
+    }
+    if($kyw!=""){
+        $sql .=" AND ten_sp like '%".$kyw."%'";
+    }
 
-//     $sql .= " ORDER BY id DESC limit ".$limi;
-//     return pdo_query($sql);
-// }
+    $sql .= " ORDER BY id DESC limit ".$limi;
+    return pdo_query($sql);
+}
 
 
 
-// function get_dssp_lienquan($iddm,$id,$limi){
-//     $sql = "SELECT * FROM sanpham WHERE danh_muc_id=? AND id<>? ORDER BY id DESC limit ".$limi;
-//     return pdo_query($sql,$iddm,$id);
-// }
+function get_dssp_lienquan($iddm,$id,$limi){
+    $sql = "SELECT * FROM sanpham WHERE danh_muc_id=? AND id<>? ORDER BY id DESC limit ".$limi;
+    return pdo_query($sql,$iddm,$id);
+}
 
 
 

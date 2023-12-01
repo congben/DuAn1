@@ -210,10 +210,10 @@ if (isset($_GET['pg'])) {
        include("View/header.php");
 
 
-            //  if (isset($_GET['del']) && ($_GET['del'])){
-            //     $id = $_GET['del'];
-            //     echo ($id);
-            //     xoaSanPham($id);}
+             if (isset($_GET['del']) && ($_GET['del'])){
+                $id = $_GET['del'];
+                echo ($id);
+                xoaSanPham($id);}
 
 
 
@@ -246,34 +246,34 @@ if (isset($_GET['pg'])) {
             //     }
             // }
 
-            // if(isset($_REQUEST['del'])){
-            //     $id_del = $_REQUEST['del'];
-            //     $sp = [$id_del];
-            //     $vitri = kiemtra($sp);
-            //     array_splice($_SESSION['giohang'],$vitri,1);
-            // }
+            if(isset($_REQUEST['del'])){
+                $id_del = $_REQUEST['del'];
+                $sp = [$id_del];
+                $vitri = kiemtra($sp);
+                array_splice($_SESSION['giohang'],$vitri,1);
+            }
 
 
 
 
 
-            // if (isset($_GET['del'])) {
-            //     $delId = $_GET['del'];
+            if (isset($_GET['del'])) {
+                $delId = $_GET['del'];
 
-            //     // Tìm và xóa sản phẩm khỏi giỏ hàng
-            //     foreach ($_SESSION['giohang'] as $key => $sp) {
-            //         if ($sp['id'] == $delId) {
-            //             unset($_SESSION['giohang'][$key]);
-            //             array_splice($_SESSION['giohang'],$vitri,1);
-            //             break;
-            //         }
-            //     }
+                // Tìm và xóa sản phẩm khỏi giỏ hàng
+                foreach ($_SESSION['giohang'] as $key => $sp) {
+                    if ($sp['id'] == $delId) {
+                        unset($_SESSION['giohang'][$key]);
+                        array_splice($_SESSION['giohang'],$vitri,1);
+                        break;
+                    }
+                }
 
-            //     // Chuyển hướng người dùng đến trang giỏ hàng sau khi xóa sản phẩm
-            //     header('Location: index.php?pg=giohang');
-            //     exit();
-            // }
-            //include "view/viewcart.php";
+                // Chuyển hướng người dùng đến trang giỏ hàng sau khi xóa sản phẩm
+                header('Location: index.php?pg=giohang');
+                exit();
+            }
+            include "view/viewcart.php";
 
 
 

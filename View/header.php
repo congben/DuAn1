@@ -1,27 +1,27 @@
 <?php
 
-// $dsdm = danhmuc_all();
+$dsdm = danhmuc_all();
 
-// $kyw = "";
-// $titlepage = "";
+$kyw = "";
+$titlepage = "";
 
-// if (!isset($_GET['iddm'])) {
-//     $iddm = 0;
-// } else {
-//     $iddm = $_GET['iddm'];
-//     $titlepage = get_name_dm($iddm);
-// }
+if (!isset($_GET['iddm'])) {
+    $iddm = 0;
+} else {
+    $iddm = $_GET['iddm'];
+    $titlepage = get_name_dm($iddm);
+}
 
-// // kiểm tra có phải form search không?
-// if (isset($_POST["timkiem"]) && ($_POST["timkiem"])) {
-//     $kyw = $_POST["kyw"];
-//     $titlepage = "Kết quả tìm kiếm với từ khóa: <span>" . $kyw . "</span>";
-// }
+// kiểm tra có phải form search không?
+if (isset($_POST["timkiem"]) && ($_POST["timkiem"])) {
+    $kyw = $_POST["kyw"];
+    $titlepage = "Kết quả tìm kiếm với từ khóa: <span>" . $kyw . "</span>";
+}
 
-// $dssp = get_dssp($kyw, $iddm, 6);
+$dssp = get_dssp($kyw, $iddm, 6);
 
-// $html_dm = showdm($dsdm);
-// 
+$html_dm = showdm($dsdm);
+
 ?>
 
 
@@ -111,7 +111,7 @@ if (isset($_SESSION['s_user']) && ($_SESSION['s_user'])) {
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!-- Begin Body Wrapper -->
+    <!-- Begin Body Wrapper  Nguyeen coong beefn #-->
     <div class="body-wrapper">
         <!-- Begin Header Area -->
         <header>

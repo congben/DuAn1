@@ -14,4 +14,10 @@ function showdm($dsdm){
     }
     return $html_dm;
 }
+
+function get_name_dm($iddm){
+    $sql = "SELECT ten FROM loai WHERE id=".$iddm;
+    $kq=pdo_query_one($sql);
+    return $kq["ten"];
+}
 ?>
