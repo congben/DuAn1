@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "../../../dao"
+		},
+		{
+			"path": "../../../duan1"
+		},
+		{
+			"path": "../../../DA1"
+		},
+		{
+			"path": "G:/HK_FALL 2023/htdocs/MVC_WD18324"
+		},
+		{
+			"path": "G:/HK_FALL 2023/htdocs/XUONGDAM"
+		},
+		{
+			"path": "../../../da2/Da1"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "da3"
+	}
+}

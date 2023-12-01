@@ -1,0 +1,17 @@
+<?php
+function danhmuc_all(){
+    $sql = "SELECT * FROM danhmuc ORDER BY id DESC";
+    return pdo_query($sql);
+
+
+}
+function showdm($dsdm){
+    $html_dm='';
+    foreach ($dsdm as $dm) {
+        extract($dm);
+        $link='index.php?pg=dmsanpham&iddm='.$id;
+        $html_dm.='<li class="has-sub"><a href="'.$link.'">'.$ten.'</a></li>';
+    }
+    return $html_dm;
+}
+?>
