@@ -1,52 +1,5 @@
     <?php
-    $html_cart=viewcart();
-    $tong=get_tongdonhang();
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Lấy giá trị số lượng từ form
-        $soluong = $_POST['soluong'];
     
-        // Lấy giá trị id của sản phẩm từ form
-        $id = $_POST['id'];
-    
-        // Kiểm tra xem giỏ hàng đã được khởi tạo trong session hay chưa
-        if (!isset($_SESSION['giohang'])) {
-            $_SESSION['giohang'] = array();
-        }
-    
-        // Kiểm tra xem sản phẩm có tồn tại trong giỏ hàng hay không
-        if (isset($_SESSION['giohang'][$id])) {
-            // Cập nhật số lượng của sản phẩm trong giỏ hàng
-            $_SESSION['giohang'][$id]['soluong'] = $soluong;
-        }
-    
-        // Thực hiện các xử lý khác...
-    
-        // Chuyển hướng trở lại trang giỏ hàng hoặc trang khác
-        header('Location: index.php?pg=giohang');
-        exit;
-    }
-    if (isset($_GET['soluong']) && isset($_GET['id'])) {
-        // Lấy giá trị số lượng và id từ URL
-        $soluong = $_GET['soluong'];
-        $id = $_GET['id'];
-    
-        // Kiểm tra xem giỏ hàng đã được khởi tạo trong session hay chưa
-        if (!isset($_SESSION['giohang'])) {
-            $_SESSION['giohang'] = array();
-        }
-    
-        // Kiểm tra xem sản phẩm có tồn tại trong giỏ hàng hay không
-        if (isset($_SESSION['giohang'][$id])) {
-            // Cập nhật số lượng của sản phẩm trong giỏ hàng
-            $_SESSION['giohang'][$id]['soluong'] = $soluong;
-        }
-    
-        // Thực hiện các xử lý khác...
-    
-        // Chuyển hướng trở lại trang giỏ hàng hoặc trang khác
-        header('Location: index.php?pg=giohang');
-        exit;
-    }
     ?>
     
     

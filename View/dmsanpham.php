@@ -1,5 +1,5 @@
 <?php
-   $html_dm=showdm($dsdm);
+ // $html_dm=showdm($dsdm);
 //    $html_sp_lienquan=showsp($dssp_lienquan);
 //    extract($spchitiet);
      $html_dssp=showsp($dssp);

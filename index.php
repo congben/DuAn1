@@ -96,7 +96,6 @@ if (isset($_GET['pg'])) {
             //             header('location: index.php');
             //         }
 
-
             //         //out
 
             //     }else{

@@ -1,5 +1,13 @@
 <?php
 require_once 'database.php';
+function them_gio_hang($nd_id, $noi_dung, $sp_id){
+    $sql = "INSERT INTO donhangchitiet(nguoidung_id, noidung, sanpham_id) VALUES (?,?,?)";
+    pdo_execute($sql,$nd_id, $noi_dung, $sp_id);
+}
+
+
+
+
 function dssp_giohang($dssp_giohang)
 {
     $html_cart = '';
