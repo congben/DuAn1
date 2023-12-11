@@ -246,12 +246,12 @@ if (isset($_GET['pg'])) {
             //     }
             // }
 
-            if(isset($_REQUEST['del'])){
-                $id_del = $_REQUEST['del'];
-                $sp = [$id_del];
-                $vitri = kiemtra($sp);
-                array_splice($_SESSION['giohang'],$vitri,1);
-            }
+            // if(isset($_REQUEST['del'])){
+            //     $id_del = $_REQUEST['del'];
+            //     $sp = [$id_del];
+            //     $vitri = kiemtra($sp);
+            //     array_splice($_SESSION['giohang'],$vitri,1);
+            // }
 
 
 

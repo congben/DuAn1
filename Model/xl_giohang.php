@@ -71,6 +71,7 @@ function cart_small()
 
     return $html_cart;
 }
+
 function xoaspgiohang($id) {
     // Kiểm tra xem giỏ hàng có tồn tại không
     if (isset($_SESSION['giohang'])) {
@@ -81,6 +82,43 @@ function xoaspgiohang($id) {
                 break;
             }
         }
+    }
+}
+
+function sosanpham() {
+    $count = 0;
+
+    if (isset($_SESSION['giohang'])) {
+        $count = count($_SESSION['giohang']);
+    }
+
+    return $count;
+}
+
+function xoaSanPham($id) {
+    // Kiểm tra xem giỏ hàng đã được tạo chưa
+    if (isset($_SESSION['giohang'])) {
+        $gioHang = $_SESSION['giohang'];
+
+        // Tìm kiếm vị trí của sản phẩm trong giỏ hàng bằng ID
+        $index = -1;
+        foreach ($gioHang as $key => $sanPham) {
+            if ($sanPham['id'] === $id) {
+                $index = $key;
+                break;
+            }
+        }
+
+        // Nếu sản phẩm được tìm thấy, xóa nó khỏi giỏ hàng
+        if ($index !== -1) {
+            unset($gioHang[$index]);
+            $_SESSION['giohang'] = array_values($gioHang); // Reset lại chỉ số của mảng
+            echo 'Đã xóa sản phẩm khỏi giỏ hàng.';
+        } else {
+            echo 'Không tìm thấy sản phẩm trong giỏ hàng.';
+        }
+    } else {
+        echo 'Giỏ hàng không tồn tại.';
     }
 }
 
